@@ -8,11 +8,35 @@ class test_class():
         self.second_key = second_key
         self.debug = debug
         self.response = None
+        self.map = {}
+        self.list = []
+
+        self.create_map()
+        self.create_list()
 
         if debug:
             print("Debug mode enabled")
             print("DEBUG First Key: " + self.first_key)
             print("DEBUG Second Key: " + self.second_key)
+
+    def create_map(self):
+        self.map["key1"] = "value1"
+
+    def work_map(self):
+        print(self.map)
+
+        for key, value in sorted(self.map.items()):
+            print(f"{key}: {value}")
+
+    def create_list(self):
+        self.list.append("item1")
+        self.list.append("item2")
+
+    def work_list(self):
+        print(self.list)
+
+        for index, item in enumerate(sorted(self.list)):
+            print(f"{index}: {item}")
 
     def print_something(self):
         print("First Key: " + self.first_key)

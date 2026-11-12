@@ -19,7 +19,6 @@ def parse_args(argv=None):
 
     return parser.parse_args(argv)
 
-
 def main(argv=None):
     args = parse_args(argv)
 
@@ -33,6 +32,7 @@ def main(argv=None):
         test_obj.run_get(args.url)
         print(test_obj.get_content())
 
+    test_obj.work_map()
 
 if __name__ == "__main__":
     main()
